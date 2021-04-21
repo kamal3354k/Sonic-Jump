@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" onkeydown="jump()">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Jump</title>
+    <link rel="stylesheet" href="Sonic-Jump.css">
+</head>
+
+<body>
+    <div class="game-box">
+        <div class="bg" id="bg"></div>
+        <button id="btn" onclick="run()"><p>Try Again?</p></button>
+        <div id="character">
+            <img src="images/sonic.gif" height="170px" width="135px" alt="">
+        </div>
+
+        <div id="obstacle1" >
+            <img src="images/m2.png" height="80px" width="80px" alt="">
+        </div>
+        <div class="track" id="track">
+            <!-- <img src="track.png" alt=""> -->
+        </div>
+    </div>
+    <h1 id="count">00</h1>
+    <script src="Sonic-Jump.js"></script>
+</body>
+
+</html>

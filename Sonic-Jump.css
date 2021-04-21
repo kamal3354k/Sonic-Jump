@@ -1,0 +1,156 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    /* margin-top: 100px; */
+    display: flex;
+    overflow: hidden;
+   /* justify-content: center; */
+   background-color:#865939;
+}
+.game-box{
+    width: 1520px;
+    height:600px;
+    border:1px solid #000;
+    position: absolute;
+    /* background-image: url(bg.png); */
+    background-size: 1500px 490px;
+    background-repeat: repeat-x;
+}
+#bg{
+    width: 10000px;
+    height:600px;
+    border:1px solid #000;
+    position: fixed;
+    background-image: url(images/bg.png);
+    background-size: 2000px 490px;
+    background-repeat: repeat-x;
+    animation: bg 100s infinite linear;
+}
+@keyframes bg {
+    100%{transform: translateX(-5000px);}
+}
+
+#character{
+width: 135px;
+height: 170px;
+position: fixed;
+/* background:blue; */
+top:335px;
+left: 10px;
+z-index: 9;
+/* animation: sonic 1s infinite; */
+}
+
+/* @keyframes sonic {
+    0%{background-image: url(sonic.gif);}
+    30%{background-image: url(ani1.png);}
+    60%{background-image: url(ani1.png);}
+    100%{background-image: url(sonic.gif);}
+} */
+
+.animate{
+    animation: jump .5s;
+}
+@keyframes jump {
+0%{top:335px}
+10%{top:320px}
+30%{top:270px}
+50%{top:270px}
+70%{top:270px}
+90%{top:320px}
+100%{top:335px}
+}
+#obstacle1{
+    width: 85px;
+    height: 80px;
+    /* background-color: chartreuse; */
+    position: fixed;
+    top: 450px;
+    left: 470px;
+    /* animation: obstacle1 1s infinite linear;  */
+  
+    /* animation-duration:1s ; */
+    z-index: 9;
+     
+}
+
+.animate-obs{
+    animation-name: obstacle1;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes obstacle1 {
+    0% {left:1520px;}
+    100%{left: -30px;}
+}
+.game-over{
+    width: 250px;
+    height: 50px;
+    border: 1px solid #000;
+    margin-left: 100px;
+    display: none;
+
+}
+/* .animate2{
+    animation: obstacle10 1s infinite linear ;
+}
+
+@keyframes obstacle10 {
+    
+} */
+h1{
+    z-index: 9;
+    font-size: 55px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border:8px solid #000;
+    padding: 10px;
+    border-radius: 50px;
+
+}
+#obstacle1 > img {
+    margin-top: -15px;
+}
+#btn{
+position:relative;
+top: 270px;
+margin: auto auto;
+/* left: 600px; */
+border:5px solid #000;
+border-radius: 10px;
+background: red;
+z-index: 999999999999;
+transform: scale(.5);
+transition: 1s;
+display: none;
+}
+/* #btn:hover{
+transform: scale(1.5);
+} */
+p{
+    font-size: 50px;
+    padding: 10px;;
+    /* border:3px solid #000; */
+    color: #fff;
+}
+#track{
+    background-image: url(images/track.png);
+    background-size: 100% 220px;
+    z-index: 2;
+    width: 1000%;
+    height: 200px;
+    position: absolute;
+    top: 485px;
+    background-repeat: repeat-x;
+    animation: track-run 8s infinite linear;
+}
+@keyframes track-run {
+    100%{transform: translateX(-8000px);}
+}
