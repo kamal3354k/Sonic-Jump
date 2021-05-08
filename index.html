@@ -6,26 +6,155 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragon Jump</title>
-    <link rel="stylesheet" href="Sonic-Jump.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" class="bg" href="Sonic-Jump.css">
 </head>
 
 <body>
-    <div class="game-box">
-        <div class="bg" id="bg"></div>
-        <button id="btn" onclick="run()"><p>Try Again?</p></button>
+    <div class="game-box container">
+        <div class="bg col-lg-12" id="bg"></div>
+        <button id="btn">
+            <p>Try Again?</p>
+        </button>
         <div id="character">
-            <img src="images/sonic.gif" height="170px" width="135px" alt="">
+            <img id="so" src="sonic.gif" height="170px" width="135px" alt="">
         </div>
 
-        <div id="obstacle1" >
-            <img src="images/m2.png" height="80px" width="80px" alt="">
+        <div id="obstacle1">
+            <img id="to" src="https://pa1.narvii.com/5768/8d2cd6afdd78d3291523fb204f655557d18e641e_hq.gif" height="80px"
+                width="80px" alt="">
         </div>
         <div class="track" id="track">
             <!-- <img src="track.png" alt=""> -->
         </div>
-    </div>
-    <h1 id="count">00</h1>
-    <script src="Sonic-Jump.js"></script>
+
+        <h1 id="count">00</h1>
+        <!-- <button class="btn bg-primary">Click</button> -->
+        <!-- <h1 id="score">00</h1> -->
+        <div class="container" id="menu_box">
+            <div class="alert alert-danger alert-dismissible">
+                <!-- <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> -->
+                <strong>Choose Your Player , Obstacle , Background and Track.</strong>
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                            aria-controls="home" aria-selected="true">Character</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                            aria-controls="profile" aria-selected="false">Obstacle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                            aria-controls="contact" aria-selected="false">Background</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="myTabContent">
+
+
+                    <p style="font-size: 100px; position: absolute; text-align: center;font-weight: 900;
+             color: #6160e5a6;
+             padding-left: 234px;">Game Over</p>
+
+
+
+
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                        <div class="char" onclick="player1()"> <img src="sonic.gif" height="170px" width="135px" alt="">
+                        </div>
+                        <div class="char" onclick="player2()"> <img src="m.gif" height="170px" width="135px" alt="">
+                        </div>
+                        <div class="char" onclick="player3()"> <img
+                                src="https://media0.giphy.com/media/9GJcLOV16IsScnqgYO/giphy.gif" height="170px"
+                                width="135px" alt=""></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        ...
+                    </div>
+                    <button style="padding:10px;" onclick="run()">Start-game</button>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+
+
+
+
+                        <div class="obs" onclick="obs1()"> <img
+                                src="https://pa1.narvii.com/5768/8d2cd6afdd78d3291523fb204f655557d18e641e_hq.gif"
+                                height="170px" width="135px" alt=""></div>
+                        <div class="obs" onclick="obs2()"> <img src="m2.png" height="170px" width="135px" alt=""></div>
+                        <!-- <div class="obs" id="sonic1"> <img src="sonic.gif" height="170px" width="135px" alt=""></div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        ...
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+
+                        <div class="land"  id="land1" onclick="land1()">
+                        </div>
+                        <div class="land" id="land2"  onclick="land2()">
+                        </div>
+                        <div class="land" id="land3"  onclick="land3()"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        ...
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <script src="Sonic-Jump.js"></script>
 </body>
 
 </html>
